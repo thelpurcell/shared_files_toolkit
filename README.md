@@ -107,7 +107,7 @@ This script will show you what shared links are currently live across the whole 
 ### How to run ListSharedLinks.py
 
 1. Place the ‘ListSharedLinks.py’ file in necessary location on your machine
-2. Edit line 22 of the script and set your Team Member File Access token as the “dfbToken” variable. It should look like this:  `dfbToken = '123456``'` where 123456 is your Team Member File Access token.
+2. Edit line 22 of the script and set your Team Member File Access token as the “dfbToken” variable. It should look like this:  `dfbToken = '123456'` where 123456 is your Team Member File Access token.
 3. Run the script. Note that by default it will output to stdout, you can redirect the stdout to a .csv file and open in Excel, or tweak the code to produce a .csv if desired.
 
 The output should contain the following columns:
@@ -128,7 +128,7 @@ This script will show you all Shared Folders (and Shared Files) that are shared 
 
 1. Place the ‘List_all_shared_folders_of_a_team.py’ script in the necessary location on your machine
 2. Edit line 23 of the script and set you Team Member File Access token agains the dfbToken variable, remember to include “Bearer “ before your token. 
-    It should look like this  `dfbToken = "Bearer 123456``"` `` where 123456 is your Team Member File Access token.
+    It should look like this  `dfbToken = "Bearer 123456"` where 123456 is your Team Member File Access token.
 3. Run the script. Note that by default it will output to stdout, you can redirect the stdout to a .csv file and open in Excel, or tweak the code to produce a .csv if desired.
 4. When you open the file, filter on ‘[e]’ (without the single quotes) in the Members column to show those links that are going to an external person ([i] = internal and [e] = external in this column of the output csv file).
 
