@@ -8,7 +8,7 @@ Please note that this code is supplied for example and experimentation is not of
 This is a call out to those who originally developed the scripts within this repository. As these have been written by Dropboxers past and present who have shared this code publically through various repositories, this repository is an attempt to consolidate them all and form a central repository for ongoing development and to make it easier to share and surface handy code for the benefit of Dropbox customers.
 
 # Prerequisites
-In order to run all of the code in this repository, you will need to generate the required Access tokens and paste the token relevant tokens into the individual scripts for them to be able to be authorised to execute the required API commands against your Dropbox instance. You will need to be a Team Admin on your Dropbox team in order to generate the keys.
+In order to run all of the code in this repository, you will need to generate the required Access tokens and paste the relevant tokens into the individual scripts for them to be able to be authorised to execute the required API commands against your Dropbox instance. You will need to be a Team Admin on your Dropbox team in order to generate the tokens.
 
 ## Generate a Team Member File Access token
 
