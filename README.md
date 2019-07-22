@@ -4,6 +4,9 @@ Repository for handy scripts and tools for Admins
 # Disclaimer
 Please note that this code is supplied for example and experimentation is not officially supported. When this was tested locally, it ran quite fast across one of our demo environments but the time it takes to complete obviously depends on the size of your Dropbox instance.
 
+# Important!
+Keep in mind these scripts will consume your API call quota. Please ensure not to impact any other services or integrations that rely on API calls from your Dropbox instance. Please be aware of your API call quota limits and make sure using these script will not cause disruption to production integrations or services dependant on api interaction with Dropbox.
+
 # Acknowledgement of original code authors
 This is a call out to those who originally developed the scripts within this repository. As these have been written by Dropboxers past and present who have shared this code publically through various repositories, this repository is an attempt to consolidate them all and form a central repository for ongoing development and to make it easier to share and surface handy code for the benefit of Dropbox customers.
 
