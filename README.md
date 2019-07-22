@@ -58,7 +58,10 @@ To generate your Team Information Access Token:
 As a Team Admin, this script will show you, the user who runs the script, what shared folders you currently have and who these are shared with.
 
 ### Requirements
-  - Python 3 installed
+  - Python 3
+  - Team Member File Access token
+  - Team Member Management Access token
+  - Team Information Access token
   - getCollaborationReport-py3
   - Classes.py
   - users.csv
@@ -76,21 +79,60 @@ As a Team Admin, this script will show you, the user who runs the script, what s
 5. Open the .csv file produced in Excel
 
 The output should contain;
-| Column Name              | Description                                                                                                                                                                                                                       |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Owner email              | Email address of the share, note if this is blank someone is sharing this folder with you, so you can filter out the blanks for simplicity                                                                                        |
-| Owner Name               | As above, if this is blank, you are not the owner, so filter out the blannks                                                                                                                                                      |
-| Folder Name              | Name of folder shared                                                                                                                                                                                                             |
-| Folder Path              | Path of shared folder                                                                                                                                                                                                             |
-| Folder ID                | Folder ID                                                                                                                                                                                                                         |
-| Collaborator Email       | Who has access to this share                                                                                                                                                                                                      |
-| Collaborator Permissions | What type of access does the collaborator have with this share, note you can filter this field to show only shares where you are the owner. Editors or Read Only users have access to the share and those respective permissions. |
-| Collaborator on Team     | Tells you if the person is inside or outside your Dropbox Team, False means the collaborator is external to the Atlassian Team                                                                                                    |
-| Folder Mount Status      | Mounted or Unmounted                                                                                                                                                                                                              |
-| Group Name               | TBC                                                                                                                                                                                                                               |
-| Group Members            | TBC                                                                                                                                                                                                                               |
-| Group Permissions        | TBC                                                                                                                                                                                                                               |
-| Group Type               | TBC                                                                                                                                                                                                                               |
-| Team Owned Folder        | TBC                                                                                                                                                                                                                               |
+- Owner email - Email address of the share, note if this is blank someone is sharing this folder with you, so you can filter out the blanks for simplicity
+- Owner Name - As above, if this is blank, you are not the owner, so filter out the blanks
+- Folder Name - Name of folder shared
+- Folder Path - Path of shared folder
+- Folder ID - Folder ID
+- Collaborator Email - Who has access to this share
+- Collaborator Permissions - What type of access does the collaborator have with this share, note you can filter this field to show only shares where you are the owner. Editors or Read Only users have access to the share and those respective permissions.
+- Collaborator on Team - Tells you if the person is inside or outside your Dropbox Team, False means the collaborator is external to the Atlassian Team
+- Folder Mount Status - Mounted or Unmounted
+- Group Name - TBC
+- Group Members - TBC
+- Group Permissions - TBC
+- Group Type - TBC
+- Team Owned Folder - TBC
 
+## ListSharedLinks.py
+This script will show you what shared links are currently live across the whole of your Dropbox team.
 
+### Requirements
+- Team Member File Access token
+- Python 3
+
+### How to run ListSharedLinks.py
+
+1. Place the ‘ListSharedLinks.py’ file in necessary location on your machine
+2. Edit line 22 of the script and set your Team Member File Access token as the “dfbToken” variable. It should look like this:  `dfbToken = '123456``'` where 123456 is your Team Member File Access token.
+3. Run the script. Note that by default it will output to stdout, you can redirect the stdout to a .csv file and open in Excel, or tweak the code to produce a .csv if desired.
+
+The output should contain the following columns:
+- User - User who created/owns the link
+- Path - Path to the content shared
+- Visibility - Indicates if the shared link is team_only, public or shared folder only
+- URL - The actual shared link URL
+
+## List_all_shared_folders_of_a_team.py
+This script will show you all Shared Folders (and Shared Files) that are shared externally across the entire Dropbox Team.
+
+### Requirements
+- Team Member File Access token
+- Python 3
+- List_all_shared_folders_of_a_team.py
+
+### How to run List_all_shared_folders_of_a_team.py
+
+1. Place the ‘List_all_shared_folders_of_a_team.py’ script in the necessary location on your machine
+2. Edit line 23 of the script and set you Team Member File Access token agains the dfbToken variable, remember to include “Bearer “ before your token. 
+    It should look like this  `dfbToken = "Bearer 123456``"` `` where 123456 is your Team Member File Access token.
+3. Run the script. Note that by default it will output to stdout, you can redirect the stdout to a .csv file and open in Excel, or tweak the code to produce a .csv if desired.
+4. When you open the file, filter on ‘[e]’ (without the single quotes) in the Members column to show those links that are going to an external person ([i] = internal and [e] = external in this column of the output csv file).
+
+The output should contain the following columns:
+- User - The user who shared the content 
+- Shared Owned Folder Path - The path to the shared folder
+- Last updated (#days) - How long since this share was updated
+- No. of files - Number of files shared
+- No. of bytes - What is the total size of shared content
+- Members - Who are collaborating via this share
