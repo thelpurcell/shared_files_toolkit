@@ -1,4 +1,4 @@
-# csm-toolkit
+# Shared Files Toolkit
 Repository for handy scripts and tools for Admins
 
 # Disclaimer
