@@ -2,7 +2,7 @@
 Repository for handy scripts and tools for Admins
 
 # Disclaimer
-Please note that this code is supplied for example and experimentation is not officially supported. When this was tested locally, it ran quite fast across one of our demo environments but the time it takes to complete obviously depends on the size of your Dropbox instance.
+Please note that this code is supplied for example and experimentation purposed and is not officially supported.
 
 # Important!
 Keep in mind these scripts will consume your API call quota. Please ensure not to impact any other services or integrations that rely on API calls from your Dropbox instance. Please be aware of your API call quota limits and make sure using these script will not cause disruption to production integrations or services dependant on api interaction with Dropbox.
